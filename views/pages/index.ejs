@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Send an email</title>
+    <link rel="stylesheet" href="/assets/semantic/semantic.min.css">
+    <style>
+        .main.container {
+            margin-top: 7em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui fixed inverted menu">
+        <a href="/" class="header item">Home</a>
+    </div>
+    <div class="ui main container">
+        <h1>Send an email</h1>
+        <div class="ui divider"></div>
+        <% if(locals.flash && locals.flash.error) { %>
+        <div class="ui negative message">
+            <%= flash.error %>
+        </div>
+        <% } %>
+        <% if(locals.flash && locals.flash.success) { %>
+        <div class="ui positive message">
+            <%= flash.success %>
+        </div>
+        <% } %>
+        <form action="/" method="POST" class="ui form">
+            <div class="field">
+                <div class="ui fluid icon input">
+                    <input name="email" id="email" type="email" placeholder="From">
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui fluid icon input">
+                    <input name="subject" id="subject" type="text" placeholder="Subject">
+                </div>
+            </div>
+            <div class="field">
+                <textarea name="content" id="content" placeholder="Content..."></textarea>
+            </div>
+            <button type="submit" class="ui blue labeled submit icon button">
+                <i class="icon edit"></i>Send
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
