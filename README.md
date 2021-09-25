@@ -11,7 +11,6 @@ $ npm start
 ```
 ***
 ## Technologies
-***
 A list of technologies used within the project:
 * Node js
 * MAMP
