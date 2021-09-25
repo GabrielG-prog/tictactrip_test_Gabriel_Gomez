@@ -8,6 +8,7 @@ $ git clone https://github.com/GabrielG-prog/tictactrip_test_Gabriel_Gomez.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
+use 'localhost:80/'
 ```
 ***
 ## Technologies
